@@ -1,0 +1,14 @@
+ # Ignore everything
+*
+
+# But not these files...
+!*.md
+!*.py
+!*.sh
+!*.vim
+!.gitignore
+!makefile
+# etc...
+
+# ...even if they are in subdirectories
+!*/

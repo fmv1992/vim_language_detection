@@ -1,0 +1,127 @@
+*vim_language_detection*	For Vim Version 8.0	Last change: 2018 August 11
+
+__   _(_)_ __ ___
+\ \ / / | '_ ` _ \
+ \ V /| | | | | | |
+  \_/ |_|_| |_| |_|
+| | __ _ _ __   __ _ _   _  __ _  __ _  ___
+| |/ _` | '_ \ / _` | | | |/ _` |/ _` |/ _ \
+| | (_| | | | | (_| | |_| | (_| | (_| |  __/
+|_|\__,_|_| |_|\__, |\__,_|\__,_|\__, |\___|
+               |___/             |___/
+  __| | ___| |_ ___  ___| |_(_) ___  _ __
+ / _` |/ _ \ __/ _ \/ __| __| |/ _ \| '_ \
+| (_| |  __/ ||  __/ (__| |_| | (_) | | | |
+ \__,_|\___|\__\___|\___|\__|_|\___/|_| |_|
+
+                          Version: 0.0.1
+
+===============================================================================
+CONTENTS                                        *vim_language_detection-contents*
+
+1. Intro ......................................... |vim_language_detection-intro|
+2. Variables ................................. |vim_language_detection-variables|
+3. Details ..................................... |vim_language_detection-details|
+4. Next steps ............................... |vim_language_detection-next-steps|
+5. Development ............................. |vim_language_detection-development|
+6. Changelog ................................. |vim_language_detection_changelog|
+7. License ..................................... |vim_language_detection-license|
+
+===============================================================================
+1. Intro ~
+                                                   *vim_language_detection-intro*
+
+Autodetect the language of your files from a set of languages and change the
+`'spelllang'` accordingly.
+
+===============================================================================
+2. Variables ~
+                                               *vim_language_detection-variables*
+
+                                                       *g:vim_language_detection*
+Enable or disable this plugin.
+Has to be set before using the plugin.
+>
+    let g:vim_language_detection = v:true
+<
+
+                                             *g:vim_language_detection_languages*
+List of languages to be considered to autodetect in each buffer.
+Has to be set before using the plugin.
+>
+    let g:vim_language_detection_languages = ['en_us', 'pt_br']
+<
+
+                                 *g:vim_language_detection_en_us_dictionary_file*
+For each language specified in |g:vim_language_detection_languages| a
+dictionary file has to be specified. We recommend it to contain the most
+common ~1000 words for the language.
+Defaults for en_us and pt_br are downloaded during `make install`.
+Has to be set before using the plugin.
+>
+    let g:vim_language_detection_en_us_dictionary_file = '/path/to/en_us.txt'
+<
+
+                              *g:vim_language_detection_n_words_to_trigger_check*
+Does not trigger the setting of the 'spelllang' if the word count is low.
+Defaults to 20.
+>
+    let g:vim_language_detection_n_words_to_trigger_check = 20
+<
+                                             *g:vim_language_detection_max_lines*
+Does not trigger the setting of the 'spelllang' if the buffer is too big to
+avoid performance issues.
+Defaults to 1000.
+>
+    let g:vim_language_detection_max_lines = 1000
+<
+
+===============================================================================
+3. Details ~
+                                                 *vim_language_detection-details*
+
+vim_language_detection depends on python3 to run (no extra python3 dependencies
+required).
+
+Its mechanism is really simple: whenever you |InsertLeave| it computes the
+intersection between the set of words in the current buffer with the set of
+the most common words for each setup language. The language whose intersection
+is the largest is selected as the language for the current buffer.
+
+===============================================================================
+4. Next steps ~
+                                              *vim_language_detection-next-steps*
+
+1. Add automatic support for languages by sampling articles from Wikipedia for
+example.
+
+===============================================================================
+5. Development ~
+                                             *vim_language_detection-development*
+
+This section briefly defines development guidelines for vim-dicionary.
+
+1. This help file uses vim's conventions defined at |help-writing|.
+2. All defined functions should use vim's conventions and start with
+'VimLanguageDetection' (when applicable).
+3. Special marks for project development are '???'. They provide a easy way
+for developers to check pending issues.
+
+===============================================================================
+6. Changelog ~
+                                               *vim_language_detection-changelog*
+
+* Version 0.0.1:
+
+    * First public version.
+
+===============================================================================
+7. License ~
+                                                 *vim_language_detection-license*
+
+vim_language_detection is released under the GNU GPLv3 or later.
+See: <http://www.gnu.org/licenses/gpl.html>.
+
+-------------------------------------------------------------------------------
+
+vim:tw=79:ft=help:norl:noexpandtab:ts=4:
