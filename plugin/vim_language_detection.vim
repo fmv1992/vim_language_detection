@@ -48,9 +48,9 @@ function! s:VimLanguageDetectionMain() " {{{
         \ g:vim_language_detection_root_path)
 
 
-    " If spell is set. ???
-    if v:true
-
+    " If spell is not set ignore this plugin.
+    if ! &spell
+        return v:true
     endif
 
     " Do not invoke program if there are too many lines.

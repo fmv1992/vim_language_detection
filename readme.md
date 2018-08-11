@@ -1,4 +1,4 @@
-![](???)
+![](https://travis-ci.org/fmv1992/vim_language_detection.svg?branch=dev)
 
 # vim_language_detection
 
@@ -10,7 +10,7 @@ Autodetect the language of your files from a set of languages and change the `'s
 
 That's it, this is a [KISS](https://en.wikipedia.org/wiki/KISS_principle) plugin.
 
-Read the documentation: <???> for more details.
+Read the documentation: <https://github.com/fmv1992/vim_language_detection/blob/dev/doc/vim_language_detection.txt> for more details.
 
 # Requirements
 
@@ -39,7 +39,10 @@ let g:vim_language_detection_pt_br_dictionary_file = '/path/to/my/pt_br/list/of/
 let g:vim_language_detection_yy_zz_dictionary_file = '/path/to/my/yy_zz/list/of/common/words.txt'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alternatively issue `make all` to download the dictionaries for English and Portuguese.
+Issue `make all` to download the dictionaries for English and Portuguese:
+
+    download/languages_dictionary_files/pt_br.txt
+    download/languages_dictionary_files/en_us.txt
 
 # License
 
