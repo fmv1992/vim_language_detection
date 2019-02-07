@@ -44,6 +44,18 @@ Issue `make all` to download the dictionaries for English and Portuguese:
     download/languages_dictionary_files/pt_br.txt
     download/languages_dictionary_files/en_us.txt
 
+# Known bugs
+
+[comment]: # ( ???)
+
+By using the project: <https://github.com/jgm/pandocfilters>, the file: `./examples/caps-sample.md` with the base64 encoding of:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CgpUaGlzIGlzIHRoZSBjYXBzIHNhbXBsZSB3aXRoIMOEw7zDti4KCgoKCg==
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Causes vim to segfault.
+
 # License
 
 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
