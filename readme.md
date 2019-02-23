@@ -46,7 +46,7 @@ Issue `make all` to download the dictionaries for English and Portuguese:
 
 # Known bugs
 
-[comment]: # ( ???)
+[comment]: # (???: Bug 1.)
 
 By using the project: <https://github.com/jgm/pandocfilters>, the file: `./examples/caps-sample.md` with the base64 encoding of:
 
@@ -55,6 +55,14 @@ CgpUaGlzIGlzIHRoZSBjYXBzIHNhbXBsZSB3aXRoIMOEw7zDti4KCgoKCg==
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Causes vim to segfault.
+
+[comment]: # (???: Bug 2.)
+
+The default dictionary files are not `en_us` nor `pt_br`. They are just `pt` and `en`. See the difference here:
+
+<http://vim.1045645.n5.nabble.com/Help-needed-on-pt-BR-spell-checking-td1158778.html>
+
+There is a workaround of simlinking like this: `xx_yy.txt` →  `xx.txt`.
 
 # License
 
