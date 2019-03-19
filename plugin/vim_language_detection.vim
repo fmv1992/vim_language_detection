@@ -93,4 +93,7 @@ augroup vim_language_detection
     autocmd InsertLeave * call s:VimLanguageDetectionMain()
 augroup END
 
+" ???: Update.
+command! -nargs=0 VimLanguageDetectionVersion echom 'Vim Language Detection Version: ' . substitute(system('git rev-parse --verify HEAD'), '\D', '', 'g')
+
 " vim: set filetype=vim fileformat=unix foldmethod=marker nowrap:
