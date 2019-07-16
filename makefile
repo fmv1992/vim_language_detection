@@ -11,7 +11,7 @@ download: $(TEXT_FILES)
 
 %.txt:
 	wget --quiet -O - \
-		'https://docs.google.com/uc?export=download&id=18YWDd69SEndu2BDjXXg8GvtwvqnemaQ_' | \
+		'https://docs.google.com/uc?export=download&id=1UPfxAvg3v46lo2Dkh3cUiOQqdxQOz7WX' | \
 		tar -xJf -
 	touch $(TEXT_FILES)
 
